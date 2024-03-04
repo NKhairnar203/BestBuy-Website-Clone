@@ -1,4 +1,4 @@
-import React from "react";
+
 import laptop from "../assets/laptop.jpg";
 import product1 from "../assets/product1.jpg";
 import SaleImage from "../assets/sale-image.jpeg";

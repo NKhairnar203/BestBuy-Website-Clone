@@ -2,15 +2,18 @@ import logo from "../assets/logo.svg";
 import AieaLogo from "../assets/Aiea logo.svg";
 import Cart from "../assets/cart.svg";
 import { useState } from "react";
+import AccountDrop from "../components/AccountDrop";
 
+import { useNavigate } from "react-router-dom";
 
 import "./Navbar.css";
 const Navbar = () => {
   const [menu, setMenu] = useState(true);
-
+  const [account, setAccount] = useState(false);
+ 
   return (
     <>
-      <div className="navbar-container fixed-nav" >
+      <div className="navbar-container fixed-nav">
         <nav>
           <div className="logo-side">
             <img src={logo} alt="Logo" />
@@ -59,13 +62,12 @@ const Navbar = () => {
             <div>My Best Buy Memberships</div>
             <div>More</div>
           </ul>
-          <ul className="right-section">
-            <div>
-              <a href="">
-                <i className="fa-regular fa-user" />
-                Account
-                <i className="fa-solid fa-chevron-down" />
-              </a>
+          <ul className="right-section" >
+            <div style={{position:"relative"}} onClick={() => setAccount(!account)}>
+              <i className="fa-regular fa-user" />
+              Account
+              <i className="fa-solid fa-chevron-down" />
+              {account ? <AccountDrop /> : null}
             </div>
             <div>
               <a href="">

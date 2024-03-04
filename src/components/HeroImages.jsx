@@ -1,9 +1,17 @@
 import { Container, HStack, Text, Image, Box, Button } from "@chakra-ui/react";
 
 export const HeroImages = () => {
+  
   return (
     <>
-      <Container mt={12} mb={10} maxW="container.xl">
+      <Container   breakpoints ={
+    {base: "0em", 
+    sm: "30em", 
+    md: "48em",
+    lg: "62em", 
+    xl: "80em",
+    "2xl": "96em", }
+  } mt={12} mb={8} maxW="container.xl">
         <HStack gap={8}>
           <Box pos={"relative"}>
             <Image src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/MMT-510776_TopDealsGHP-LV-82d476b2-8238-447e-a5ba-031a67f017e0.jpg;maxHeight=960;maxWidth=960" />

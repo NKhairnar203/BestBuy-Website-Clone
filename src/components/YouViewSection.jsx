@@ -9,8 +9,9 @@ import {
   Text,
   Link,
   Image,
-  Box,
+  
 } from "@chakra-ui/react";
+import { Divider, Box, AbsoluteCenter } from "@chakra-ui/react";
 
 import Product2 from "../assets/Product2.jpg";
 import Save from "../assets/save-instagram.png";
@@ -30,7 +31,15 @@ const YouViewSection = () => {
   return (
     <>
       <VStack>
-        <Container maxW="container.xl" h={"400px"} bg={""}>
+        <Container maxW="container.xl" h={"600px"} bg={""}>
+          <Box mt={"100px"} position="relative" padding="10">
+            <Divider color={"black"} />
+            <AbsoluteCenter bg="white" px="4">
+              <h4 style={{ fontSize: "20px", textDecoration: "underline" }}>
+                You Viewed
+              </h4>
+            </AbsoluteCenter>
+          </Box>
           <Link
             fontSize="14px"
             color={"blue"}
